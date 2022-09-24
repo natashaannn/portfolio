@@ -2,18 +2,25 @@
     --dark-blue: #6D96A6;
     --light-blue: #A6D5E9;
     --green: #AED1CA;
+    --dark-green: #91b3ac;
     --light-brown: #E1D2B6;
     --dark-brown: #9E8A7A;
     --text-primary: #584753;
+    --grid-size: 24px;
   }
+
+body,html {
+    margin:0;
+    padding:0;
+}
 
 .navbar {
     background-color: var(--light-brown);
     border-radius: 8px;
-    padding: 2px;
+    padding: 10px;
+    padding-right: 10px;
     position: fixed;
     z-index: 800;
-    visibility: hidden;
 }
 
 .navbar li {
@@ -39,17 +46,17 @@
 
 #wrapper {
     width: 100%;
-    height: 2500px;
+    height: 2000px;
     position: relative;
     background: url(assets/tiles/grassTile.svg);
-    background-size: 16px 16px;
+    background-size: var(--grid-size) var(--grid-size);
     background-repeat: repeat;
     overflow: hidden;
 }
 
 #wrapper * {
     position: absolute;
-    background-size: 16px 16px;
+    background-size: var(--grid-size) var(--grid-size);
     background-repeat: repeat;
  }
 
@@ -61,14 +68,56 @@
     background: url(assets/tiles/roadCurbLeft.svg);
 }
 
+.roadCurbRight {
+    background: url(assets/tiles/roadCurbRight.svg);
+}
 
-#mainRoad {
-    width: 200px;
+.mainRoad {
     height: 100%;
     left: 50%;
+    --widthFactor: 5;
+}
+
+#mainRoad {
+    width: calc(var(--widthFactor) * var(--grid-size));
+    margin-left: calc(var(--widthFactor) / 2 * -1 * var(--grid-size));
 }
 
 #mainRoadCurbLeft {
-    width: 16px;
-    height: 100%;
+    width: var(--grid-size);
+    margin-left: calc((var(--widthFactor) / 2 * -1 - 1) * var(--grid-size));
+}
+
+#mainRoadCurbRight {
+    width: var(--grid-size);
+    margin-left: calc(var(--widthFactor) / 2 * var(--grid-size));
+}
+
+.text {
+    font-family: 'VT323', monospace;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+
+.grassText {
+    color: var(--dark-green);
+}
+
+#hero {
+    left: 10px;
+    top: 100px;
+    max-width: 100px;
+}
+
+#hero * {
+    position: relative !important;
+}
+
+#heroTitle {
+    font-size: 3em;
+}
+
+#heroSubtitle {
+    font-size: 1.5em;
+    position: relative !important;
 }

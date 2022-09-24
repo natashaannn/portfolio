@@ -6,6 +6,7 @@
     />
 
     <rect 
+    x="20"
     width="4px" 
     height="24px"
     fill="#9E8A7A" 
@@ -32,8 +33,8 @@
     fill="#dbccb1" />
 
     <rect 
-    x="20"
-    y="11"
+    x="4"
+    y="4"
     width="2" 
     height="2"
     fill="#e7dac0" />
