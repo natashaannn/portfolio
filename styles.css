@@ -1,0 +1,74 @@
+:root {
+    --dark-blue: #6D96A6;
+    --light-blue: #A6D5E9;
+    --green: #AED1CA;
+    --light-brown: #E1D2B6;
+    --dark-brown: #9E8A7A;
+    --text-primary: #584753;
+  }
+
+.navbar {
+    background-color: var(--light-brown);
+    border-radius: 8px;
+    padding: 2px;
+    position: fixed;
+    z-index: 800;
+    visibility: hidden;
+}
+
+.navbar li {
+    display: inline;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar a:link {
+    color: var(--text-primary)
+}
+
+.navbar a:active {
+    color: var(--dark-blue)
+}
+
+.navbar a:hover {
+    color: var(--green)
+}
+
+#wrapper {
+    width: 100%;
+    height: 2500px;
+    position: relative;
+    background: url(assets/tiles/grassTile.svg);
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+#wrapper * {
+    position: absolute;
+    background-size: 16px 16px;
+    background-repeat: repeat;
+ }
+
+.road {
+    background: url(assets/tiles/roadTile.svg);
+}
+
+.roadCurbLeft {
+    background: url(assets/tiles/roadCurbLeft.svg);
+}
+
+
+#mainRoad {
+    width: 200px;
+    height: 100%;
+    left: 50%;
+}
+
+#mainRoadCurbLeft {
+    width: 16px;
+    height: 100%;
+}
